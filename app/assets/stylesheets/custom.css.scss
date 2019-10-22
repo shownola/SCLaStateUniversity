@@ -1,0 +1,32 @@
+@import "materialize/components/color-variables";
+$primary-color: color("#ff5722", "deep-orange") !default;
+$secondary-color: color("#1a237e", "darken-4") !default;
+
+@import "materialize";
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+
+
+nav {
+  background-color: #ff5722;
+}
+#logo {
+  padding-top: 3px;
+}
+nav .brand-logo {
+  color: #1a237e;
+}
+#logo-name {
+  padding-bottom: 6px;
+}
+.page-footer {
+  background-color: #ff5722;
+}

@@ -5,7 +5,7 @@
 
 * Rails v5.2.3
 
-* Material Design for front-end styling
+* Materialize for front-end styling
 
 
 

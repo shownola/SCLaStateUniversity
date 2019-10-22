@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>SCLaStateUniversity</title>
+    <%= favicon_link_tag %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +11,77 @@
   </head>
 
   <body>
+
+  <header>
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">one</a></li>
+      <li><a href="#!">two</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">three</a></li>
+    </ul>
+    <nav>
+      <div class="container">
+        <div class="nav-wrapper">
+          <span id="logo" class="brand-logo right"><%= image_tag("logo4.png") %><span id="logo-name">South Central Louisiana State University</span></span>
+          <!-- <a href="#" class="brand-logo right">South Central Louisiana State University</a> -->
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Enrollment</a></li>
+            <li><a href="#">Account</a></li>
+
+            <li><%= link_to 'home', root_path %></li>
+            <li><%= link_to 'about', about_path %></li>
+            <li><%= link_to 'new course', courses_new_path %></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+
+          </ul>
+
+          <ul class="sidenav" id="mobile-demo">
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Enrollment</a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Account<i class="material-icons right">arrow_drop_down</i></a></li>
+            
+          </ul>
+        </div>
+    </div>
+  </nav>
+
+</header>
+
+<main>
+  <div class="container">
+
     <%= yield %>
+
+
+  </div>
+</main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">South Central Louisiana State University</h5>
+          <p class="grey-text text-lighten-4">MUD DOGS</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Information</h5>
+          <ul>
+            <li><%= link_to 'Home', root_path, class: "grey-text text-lighten-3" %></li>
+            <li><%= link_to 'About', about_path, class: "grey-text text-lighten-3" %></li>
+            <li><%= link_to 'New Course', courses_new_path, class: "grey-text text-lighten-3" %></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2019 Copyright Shownola / Sherry Wasieko
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
   </body>
 </html>
