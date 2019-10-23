@@ -1,13 +1,24 @@
-<h1>Course Listing</h1>
+<div class="row">
+  <div class="col s12">
+    <h3 class="center-align">Course Listing</h3>
 
-<ul>
-  <li>Code: CS111</li>
-  <li>Name: Intro to Computer Science</li>
-  <li>Description: A thorough intro to Computer Science</li>
-</ul>
+  </div>
+</div>
 
-<ul>
-  <li>Code: CS210</li>
-  <li>Name: Computer Science Level 2</li>
-  <li>Description: Concepts and Algorithms</li>
-</ul>
+<div class="row">
+  <% Course.all.each do |course| %>
+    <div class="col s6 m6">
+      <div class="card light-blue darken-3">
+        <div class="card-content white-text">
+          <span class="card-title"><%= course.short_name %>: <%= course.name %></span>
+          <p><%= course.description %></p>
+        </div>
+        <div class="card-action">
+          <a href="#">Enroll</a>
+          <a href="#">More Info</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+</div>
