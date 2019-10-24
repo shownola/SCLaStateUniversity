@@ -14,7 +14,6 @@ body {
     flex: 1 0 auto;
   }
 
-
 nav {
   background-color: #ff5722;
 }
@@ -28,5 +27,16 @@ nav .brand-logo {
   padding-bottom: 6px;
 }
 .page-footer {
+  background-color: #ff5722;
+}
+.sign-up-form {
+  padding-top: 30px;
+  
+}
+.sign-up-btn {
+  color: white !important;
+}
+
+.sign-up-form .autofocus {
   background-color: #ff5722;
 }
