@@ -31,7 +31,7 @@ nav .brand-logo {
 }
 .sign-up-form {
   padding-top: 30px;
-  
+
 }
 .sign-up-btn {
   color: white !important;
@@ -39,4 +39,10 @@ nav .brand-logo {
 
 .sign-up-form .autofocus {
   background-color: #ff5722;
+}
+body {
+  background-image: image-url('school.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
