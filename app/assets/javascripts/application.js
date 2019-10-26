@@ -14,19 +14,13 @@
 //= require jquery
 //= require materialize
 //= require activestorage
-//= require turbolinks
+
 //= require_tree .
 
 
-$(document).on('turbolinks:load', function(){
+$(document).on('ready turbolinks:load', function(){
   $(".dropdown-button").dropdown();
   $(".dropdown-trigger").dropdown();
   $('.sidenav').sidenav();
   $('#fade-out-target').fadeOut(4000);
-});
-
-
-document.addEventListener('DOMContentLoaded', function(){
-  var elems = document.querySelectorAll('.sidenav');
-  var instances = M.Sidenav.init(elems, {edge:'left'});
 });
