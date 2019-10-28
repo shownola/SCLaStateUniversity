@@ -1,0 +1,43 @@
+<%= render 'shared/errors', obj: @course %>
+
+<div class="container">
+  <div class="row center sign-up-form">
+    <div class="col s12 m12 l12">
+      <div class="card-panel">
+
+        <div class="row">
+          <%= form_for @course, html: { multipart: true, class: "col s12" } do |f| %>
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.text_field :short_name, placeholder: 'Enter short name for course', autofocus: true %>
+                <%= f.label :short_name %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.text_field :name, placeholder: 'Enter name of Course' %>
+                <%= f.label :name, class: 'active' %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.text_area :description, placeholder: 'Enter description of course' %>
+                <%= f.label :description, class: 'active' %>
+              </div>
+            </div>
+
+
+
+            <div class="row">
+              <div class="input-field col s12">
+                <%= f.submit class: 'btn sign-up-btn waves-effect waves-dark light-blue darken-4 btn-large grey-text' %>
+              </div>
+            </div>
+              <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
