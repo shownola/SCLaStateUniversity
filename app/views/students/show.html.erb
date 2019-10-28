@@ -6,8 +6,19 @@
         <div class="card-content white-text">
           <span class="card-title">Name: <%= @student.name.capitalize %></span>
           <span class="card-title">Email: <%= @student.email %></span>
+          <h5 class="flow-text">Course Enrollments:</h5>
+          <p>
+            <% if @student.courses.empty? %>
+              None
+            <% else %>
+            <ul>
+              <% @student.courses.each do |course| %>
 
-          <p>Course Enrollments: None</p>
+              <li><%= course.name %></li>
+            <% end %>
+            </ul>
+          <% end %>
+          </p>
         </div>
       </div>
       <% if current_user == @student %>
