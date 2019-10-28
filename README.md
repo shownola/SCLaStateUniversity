@@ -7,8 +7,12 @@
 
 * Materialize for front-end styling
 
+* Authentication and authorization
+
+* Deploy to Heroku
 
 
-* Deployment instructions
+
+
 
 * ...
